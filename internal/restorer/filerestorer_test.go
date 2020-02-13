@@ -52,11 +52,6 @@ func (i *TestRepo) packID(name string) restic.ID {
 	return i.packsNameToID[name]
 }
 
-// func (i *TestRepo) pack(queue *packQueue, name string) *packInfo {
-// 	id := i.packsNameToID[name]
-// 	return queue.packs[id]
-// }
-
 func (i *TestRepo) fileContent(file *fileInfo) string {
 	return i.filesPathToContent[file.location]
 }

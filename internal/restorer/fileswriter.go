@@ -81,11 +81,9 @@ func (w *filesWriter) writeToFile(path string, blob []byte, offset int64, create
 		return err
 	}
 
-	// fmt.Printf("write %s offset %d len %d '%s'\n", file.location, offset, len(data), string(data))
 	_, err = wr.WriteAt(blob, offset)
 
 	if err != nil {
-		// fmt.Printf("error %s %v\n", file.location, err)
 		releaseWriter(wr)
 		return err
 	}
